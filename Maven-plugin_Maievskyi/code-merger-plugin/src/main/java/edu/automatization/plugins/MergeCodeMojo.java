@@ -43,19 +43,19 @@ public class MergeCodeMojo extends AbstractMojo {
                     }
                 }
             }
-            getLog().info("Файли успішно об'єднані у: " + outputFile.getAbsolutePath());
+            getLog().info("Files merged successfully to: " + outputFile.getAbsolutePath());
         } catch (IOException e) {
-            throw new MojoExecutionException("Помилка під час злиття файлів", e);
+            throw new MojoExecutionException("Failed to merge ", e);
         }
     }
 
     private void appendFileContent(Path javaFile) {
         try {
-            String content = "\n\n--- Файл: " + javaFile.getFileName() + " ---\n";
+            String content = "\n\n File: " + javaFile.getFileName() + " ---\n";
             content += Files.readString(javaFile);
             Files.writeString(outputFile.toPath(), content, StandardOpenOption.APPEND);
         } catch (IOException e) {
-            getLog().error("Не вдалося прочитати файл: " + javaFile);
+            getLog().error("Cannot read the file: " + javaFile);
         }
     }
 }

@@ -7,19 +7,11 @@
     <artifactId>Maven-plugin_Maievskyi</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>code-merger-plugin</artifactId>
+  <artifactId>report-generator-plugin</artifactId>
   <packaging>maven-plugin</packaging>
-  <name>code-merger-plugin</name>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.target>21</maven.compiler.target>
-    <maven.compiler.source>21</maven.compiler.source>
-    <junit.version>5.13.2</junit.version>
-  </properties>
+  <name>report-generator-plugin</name>
 
   <dependencies>
     <dependency>
@@ -35,9 +27,4 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
-
-  <build>
-    <plugins>
-    </plugins>
-  </build>
 </project>
